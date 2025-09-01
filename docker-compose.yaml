@@ -9,7 +9,8 @@ services:
       - perplexica-network
     restart: unless-stopped
 
-  app:
+  perplexica:
+    image: itzcrazykns1337/perplexica:main
     build:
       context: .
       dockerfile: app.dockerfile
