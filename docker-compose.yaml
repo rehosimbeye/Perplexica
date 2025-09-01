@@ -4,7 +4,7 @@ services:
     volumes:
       - ./searxng:/etc/searxng:rw
     ports:
-      - 4000:4000
+      - 4000:8080
     networks:
       - perplexica-network
     restart: unless-stopped
@@ -17,7 +17,7 @@ services:
       - SEARXNG_API_URL=http://searxng:8080
       - DATA_DIR=/home/perplexica
     ports:
-      - 6000:6000
+      - 3000:3000
     networks:
       - perplexica-network
     volumes:
